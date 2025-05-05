@@ -13,6 +13,7 @@ int main (){
     char cidade2[50];
     int populacao1,populacao2, pontosturisticos1, pontosturisticos2;
     float area1,area2, pib1,pib2;
+    float densidade1, densidade2,pibpercap1,pibpercap2;
 
 printf ("\n------------------------------------------------------------------\n");
 printf ("Vamos começar o jogo, você deverá inserir as informações de duas cartas, uma de cada vez!\n");
@@ -76,6 +77,14 @@ scanf ("%f", &pib2);
 printf ("Digite a quantidade de pontos turísticos: \n");
 scanf ("%i", &pontosturisticos2);
 
+densidade1 = (float) populacao1 / area1;
+pibpercap1 = (float) ((pib1*1000000000) / populacao1);
+
+densidade2 = (float) populacao2 / area2;
+pibpercap2 = (float) ((pib2*1000000000) / populacao2);
+
+
+
 printf ("------------------------------------------------------------------\n");
 printf ("RESULTADO\n");
 printf ("------------------------------------------------------------------\n");
@@ -88,6 +97,8 @@ printf ("POPULAÇÃO: %i \n",populacao1);
 printf ("ÁREA: %.2f km²\n",area1);
 printf ("PIB: R$ %.2f (bilhões) \n", pib1);
 printf ("PONTOS TURÍSTICOS: %i \n", pontosturisticos1);
+printf ("DENSIDADE POPULACIONAL: %.2f hab/km²\n", densidade1);
+printf ("PIB PER CAPITA: R$ %.2f \n", pibpercap1);
 
 printf ("\n------------------------------------------------------------------\n");
 
@@ -99,6 +110,8 @@ printf ("POPULAÇÃO: %i \n",populacao2);
 printf ("ÁREA: %.2f km²\n",area2);
 printf ("PIB: R$ %.2f (bilhões) \n", pib2);
 printf ("PONTOS TURÍSTICOS: %i \n", pontosturisticos2);
+printf ("DENSIDADE POPULACIONAL: %.2f hab/km²\n", densidade2);
+printf ("PIB PER CAPITA: R$ %.2f \n", pibpercap2);
 
 return 0;
 
