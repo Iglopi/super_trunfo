@@ -14,6 +14,7 @@ int main (){
     int populacao1,populacao2, pontosturisticos1, pontosturisticos2;
     float area1,area2, pib1,pib2;
     float densidade1, densidade2,pibpercap1,pibpercap2;
+    float superpoder1, superpoder2;
 
 printf ("\n------------------------------------------------------------------\n");
 printf ("Vamos começar o jogo, você deverá inserir as informações de duas cartas, uma de cada vez!\n");
@@ -83,7 +84,8 @@ pibpercap1 = (float) ((pib1*1000000000) / populacao1);
 densidade2 = (float) populacao2 / area2;
 pibpercap2 = (float) ((pib2*1000000000) / populacao2);
 
-
+superpoder1 = populacao1 + area1 + pib1 + pontosturisticos1 + pibpercap1 + (1 / densidade1);
+superpoder2 = populacao2 + area2 + pib2 + pontosturisticos2 + pibpercap2 + (1 / densidade2);
 
 printf ("------------------------------------------------------------------\n");
 printf ("RESULTADO\n");
@@ -99,6 +101,7 @@ printf ("PIB: R$ %.2f (bilhões) \n", pib1);
 printf ("PONTOS TURÍSTICOS: %i \n", pontosturisticos1);
 printf ("DENSIDADE POPULACIONAL: %.2f hab/km²\n", densidade1);
 printf ("PIB PER CAPITA: R$ %.2f \n", pibpercap1);
+printf ("SUPERPODER: %.2f\n", superpoder1);
 
 printf ("\n------------------------------------------------------------------\n");
 
@@ -112,6 +115,21 @@ printf ("PIB: R$ %.2f (bilhões) \n", pib2);
 printf ("PONTOS TURÍSTICOS: %i \n", pontosturisticos2);
 printf ("DENSIDADE POPULACIONAL: %.2f hab/km²\n", densidade2);
 printf ("PIB PER CAPITA: R$ %.2f \n", pibpercap2);
+printf ("SUPERPODER: %.2f\n", superpoder2);
+
+printf ("------------------------------------------------------------------\n");
+printf ("********* COMPARAÇÃO ENTRE CARTAS *********\n");
+printf ("Na tabela abaixo está comparando duas cartas, a que o atributo estiver 1 corresponde a carta vencedora naquele atribudo!\n");
+printf ("Se ambas estiverem zeradas, houve um empate.\n");
+printf ("------------------------------------------------------------------\n");
+printf ("ATRIBUTOS         | CARTA 1 | CARTA 2|\n");
+printf ("POPULAÇÃO         |   %d     |    %d   |\n",populacao1>populacao2,populacao2>populacao1);
+printf ("ÁREA              |   %d     |    %d   |\n",area1>area2,area2>area1);
+printf ("PIB               |   %d     |    %d   |\n",pib1>pib2,pib2>pib1);
+printf ("PONTOS TURÍSTICOS |   %d     |    %d   |\n",pontosturisticos1>pontosturisticos2,pontosturisticos2>pontosturisticos1);
+printf ("DENSIDADE POPUL.  |   %d     |    %d   |\n",densidade1<densidade2,densidade2<densidade1);
+printf ("PIB PER CAPITA    |   %d     |    %d   |\n",pibpercap1>pibpercap2,pibpercap2>pibpercap1);
+printf ("SUPERPODER        |   %d     |    %d   |\n",superpoder1>superpoder2,superpoder2>superpoder1);
 
 return 0;
 
