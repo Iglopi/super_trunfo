@@ -225,15 +225,6 @@ somaresultado2 = resultadocarta2E1 + resultadocarta2E2;
 somacarta1 = (float) carta1escolha1 + carta1escolha2; 
 somacarta2 = (float) carta2escolha1 + carta2escolha2; 
 
-printf("resultadocarta1E1 %d \n",resultadocarta1E1);
-printf("resultadocarta1E2 %d \n",resultadocarta1E2);
-printf("resultadocarta2E1 %d \n",resultadocarta2E1);
-printf("resultadocarta2E2 %d \n",resultadocarta2E2);
-printf("somaresultado1 %d \n",somaresultado1);
-printf("somaresultado2 %d \n",somaresultado2);
-printf("somacarta1 %f \n",somacarta1);
-printf("somacarta2 %f \n",somacarta2);
-
 
 printf ("##################  RESULTADOS  ################## \n");
 printf("Vencedor por atributos!! \n");
